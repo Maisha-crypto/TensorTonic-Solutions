@@ -12,7 +12,7 @@ def k_means_assignment(points, centroids):
                 step_distances[i] = (p[0] - c[0]) ** 2
             else:
                 step_distances[i] = (p[0] - c[0]) ** 2 + (p[1] - c[1]) ** 2
-
+        # There could be an improvement for this function to accomdate,N-Dimensional data
         # get the min diatnce
         nearest_idx = min(step_distances, key=step_distances.get)
         assignments.append(nearest_idx)
